@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Poppins:wght@100;200;300;400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>T. Music</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: black;
+            color: white;
+
+        }
+
+        header {
+            width: 100%;
+            height: 90vh;
+            background-image: linear-gradient(rgba(61, 58, 58, 0.75), rgba(61, 58, 58, 0.75), rgb(252 176 69 / 35%)), url(/body.jpg);
+            background-size: cover;
+            /* padding: 0px 6%; */
+            position: relative;
+            background-position: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-evenly;
+            height: 50px;
+            /* border-bottom: 1px #fff solid; */
+            align-items: center;
+            /* color: aqua; */
+        }
+
+        nav:hover {
+            /* background: linear-gradient(rgb(8 8 8 / 68%), rgb(44 41 41 / 0%)); */
+            background: rgb(191, 16, 176);
+            background: linear-gradient(90deg, rgba(191, 16, 176, 1) 0%, rgba(255, 27, 81, 1) 54%, rgba(252, 176, 69, 1) 100%);
+        }
+
+        nav li {
+            list-style: none;
+            margin: 0 25px;
+        }
+
+        nav ul a {
+            text-decoration: none;
+            color: #f8c141;
+
+            font-weight: 400;
+            font-size: 1.1rem;
+        }
+
+        nav ul a:hover {
+            color: rgb(255, 255, 255);
+            /* font-size: 1.02rem; */
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        .left {
+            font-size: 1.5rem;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 300;
+            font-family: 'Caprasimo', cursive;
+            line-height: 25px;
+        }
+
+        #port {
+            color: rgb(249, 205, 5);
+            font-weight: 400;
+            font-family: 'Caprasimo', cursive;
+        }
+
+        .logo {
+            height: 25px;
+            width: 25px;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 700,
+                'GRAD' 0,
+                'opsz' 48
+        }
+
+        .about {
+            border: 2px #f8c141 solid;
+            border-radius: 4px;
+            padding: 4px 7px;
+            display: inline flex;
+            align-items: center;
+        }
+
+        .about:hover {
+            border: 2px #fff solid;
+        }
+
+        .about img {
+            width: 18px;
+            margin-right: 15px;
+        }
+
+        .content {
+            border-left: 5px solid;
+            margin: 32vh 11%;
+            padding: 20px;
+            border-color: (rgba(191, 16, 176, 1) 0%, rgba(255, 27, 81, 1) 54%);
+        }
+
+        .content .button {
+            border: 2px solid white;
+            padding: 5px 15px;
+            color: white;
+            background: transparent;
+            border-radius: 16px;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+
+        .content .button:hover {
+            background: linear-gradient(90deg, rgba(255, 27, 81, 1) 54%, rgba(252, 176, 69, 1) 100%);
+
+        }
+
+        .content .plank {
+            padding: 10px;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 8px 20px;
+        }
+
+        .search input {
+            background: transparent;
+            flex: 1;
+            border: 0;
+            outline: none;
+            padding: 1px 7px;
+
+            color: #cac7ff;
+        }
+
+        .search button img {
+            width: 18px;
+        }
+
+        ::placeholder {
+            color: #cac7ff;
+        }
+
+        .search button {
+            border: 0;
+            border-radius: 50%;
+            background: transparent;
+            cursor: pointer;
+            width: 18px;
+        }
+
+        .feature {
+            height: 35vh;
+            background: rgb(191, 16, 176);
+            background: linear-gradient(90deg, rgba(191, 16, 176, 1) 0%, rgba(255, 27, 81, 1) 54%, rgba(252, 176, 69, 1) 100%);
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-items: stretch;
+            padding: 50px;
+        }
+
+        .feat {
+            width: 150px;
+            text-align: center;
+        }
+
+        .feat::after {
+            transform: scale(1.2);
+
+        }
+
+        .feat:hover {
+            transition: transform 0.5s;
+            font-size: 1.2rem;
+        }
+
+        .feature .feat span {
+            border: 3px white solid;
+            padding: 7px;
+            border-radius: 50%;
+        }
+
+        .feature .feat span:hover {
+            transition: transform 0.5s;
+            font-size: 2rem;
+        }
+
+        .feat h3,
+        .feat p {
+            padding: 3px;
+        }
+
+        .info {
+            height: 65vh;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-items: stretch;
+            padding: 2%;
+        }
+
+        .inform img {
+            padding: 20px;
+            width: 325px;
+        }
+
+        .inform {
+            width: 400px;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .inform h2 {
+            padding: 4px;
+        }
+
+        .inform .button {
+            border: 2px solid white;
+            padding: 5px 15px;
+            color: white;
+            background: transparent;
+            border-radius: 16px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .inform .button:hover {
+            background: linear-gradient(90deg, rgba(255, 27, 81, 1) 54%, rgba(252, 176, 69, 1) 100%);
+
+        }
+
+        .service {
+            height: 60vh;
+            background: linear-gradient(90deg, rgba(255, 27, 81, 1) 54%, rgba(252, 176, 69, 1) 100%);
+            text-align: center;
+            padding: 15px;
+        }
+
+        .our {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-items: stretch;
+            padding: 2%;
+        }
+
+        .serv1 {
+            height: 28vh;
+            width: 295px;
+            background-image: url(/mob.png);
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .serv2 {
+            height: 28vh;
+            width: 200px;
+            background-image: url(/code.png);
+            background-size: cover;
+            background-position: center;
+            display: inline block;
+        }
+
+        .serv3 {
+            height: 25vh;
+            width: 250px;
+            background-image: url(/connect.png);
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .serv1 span,
+        .serv2 span,
+        .serv3 span {
+            background: linear-gradient(90deg, rgba(255, 27, 81, 1) 54%, rgba(252, 176, 69, 1) 100%);
+            padding: 7px;
+            border: 0;
+            border-radius: 50%;
+        }
+
+        .one {
+            background: #fff;
+            border-radius: 25px;
+            width: 250px;
+            display: inline block;
+            margin-top: 190px;
+            margin-left: 20px;
+            padding: 2px 10px;
+
+        }
+
+        .one p {
+            color: #ff285b;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .singer {
+            height: 55vh;
+            text-align: center;
+            margin-top: 25px;
+            padding: 10px;
+        }
+
+        .allsi .sing img {
+            width: 150px;
+            padding: 10px;
+        }
+
+        .allsi .sing ::after {
+            transition: transform 0.5s;
+        }
+
+        .allsi .sing :hover {
+            transform: scale(1.3);
+            color: #ff285b;
+        }
+
+        .sing h3 {
+            padding: 10px;
+
+        }
+
+        .allsi {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-items: stretch;
+            padding: 2%;
+        }
+
+        .sing {
+            padding: 10px 30px;
+        }
+
+        .singer .button {
+            padding: 5px 15px;
+            color: white;
+            background: linear-gradient(90deg, rgba(255, 27, 81, 1) 54%, rgba(252, 176, 69, 1) 100%);
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .singer .button:hover {
+            background: transparent;
+            border: 3px solid #fff;
+            border-radius: 25px;
+
+        }
+
+        footer {
+            padding: 20px 15% 10px;
+            /* border-top: 6px solid #333; */
+            color: #c1bdbd;
+            background: rgb(191, 16, 176);
+            background: radial-gradient(circle, rgba(191, 16, 176, 1) 0%, rgba(255, 40, 91, 1) 22%, rgba(252, 176, 69, 1) 77%);
+            margin-top: 20px;
+        }
+
+        Footer p {
+            margin-bottom: 30px;
+            margin-top: 10px;
+        }
+
+        /* .hori > div{
+            width: 880px;
+        } */
+        .hori {
+            display: flex;
+            padding: 0px 122px 10px 0px;
+            justify-content: flex-start;
+        }
+
+        .vert {
+            width: 400px;
+        }
+
+        .vert ul li a {
+            text-decoration: none;
+            color: #ebcdcd;
+            font-weight: lighter;
+        }
+
+        .vert ul li a:hover {
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        .vert ul {
+            padding-right: 150px;
+        }
+
+        .vert ul li {
+            list-style: none;
+        }
+
+        footer .engbtn {
+            margin-top: 20px;
+        }
+
+        footer section {
+            color: #c1bdbd;
+            margin: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <div class="left">
+                <img src="/logo.png" class="logo">
+                T. <span id="port">Music</span>
+            </div>
+
+            <div class="right">
+                <ul>
+                    <li><a href="www.google.com">Home</a></li>
+                    <li><a href="www.google.com">Feature</a></li>
+                    <li><a href="www.google.com">Pro mode</a></li>
+                    <li><a href="www.google.com" class="about"><img src="/person yellow (2).png">Login</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input type="text" name="search" id="search" placeholder="Search the Website">
+                <button type="submit"><img src="/icons8-search-50.png"></button>
+            </div>
+        </nav>
+        <main>
+            <div class="content">
+                <p class="con1">Listen to a beautiful music with</p>
+                <h1>
+                    T. MUSIC
+                </h1>
+                <p class="con2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, blanditiis alias!
+                </p>
+                <p class="con3">
+                    Nihil sit deleniti nobis possimus fugit delectus repudiandae ducimus.
+                </p>
+                <div class="plank">
+                    <button class="button">LinkedIN</button>
+                    <button class="button">Resume</button>
+                </div>
+            </div>
+        </main>
+    </header>
+    <div class="feature">
+
+        <div class="feat">
+            <span class="material-symbols-outlined">
+                download
+            </span>
+            <h3>Free Download</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="feat">
+            <span class="material-symbols-outlined">
+                headphones
+            </span>
+            <h3>Mood Fluent</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="feat">
+            <span class="material-symbols-outlined">
+                earbuds
+            </span>
+            <h3>Join Support</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="feat">
+            <span class="material-symbols-outlined">
+                radio
+            </span>
+            <h3>Your Radio</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="feat">
+            <span class="material-symbols-outlined">
+                lyrics
+            </span>
+            <h3>Read Lyrics</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="feat">
+            <span class="material-symbols-outlined">
+                autoplay
+            </span>
+            <h3>Autoplay</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+
+
+    </div>
+
+    <div class="info">
+        <div class="inform"><img src="/girl1.png"></div>
+        <div class="inform">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aut alias numquam commodi nam debitis
+                autem, ipsam culpa rerum exercitationem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+                consectetur quisquam nulla illo accusantium ipsa quam molestias recusandae sed perferendis.</p>
+            <button class="button">Read more..</button>
+        </div>
+        <div class="inform"><img src="/men1.png"></div>
+
+    </div>
+
+    <div class="service">
+        <h1>Our Services</h1>
+        <div class="our">
+            <div class="serv1">
+                <section class="one">
+                    <span class="material-symbols-outlined">
+                        smartphone
+                    </span>
+                    <p>Portable</p>
+                </section>
+            </div>
+            <div class="serv2">
+                <section class="one">
+                    <span class="material-symbols-outlined">
+                        share
+                    </span>
+                    <p>Share</p>
+                </section>
+            </div>
+            <div class="serv3">
+                <section class="one">
+                    <span class="material-symbols-outlined">
+                        hub
+                    </span>
+                    <p>Connectivity</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <section class="singer">
+        <h1>Listen to the popular singer!</h1>
+        <div class="allsi">
+            <div class="sing">
+                <img src="sing2.png">
+                <h3>Neha Kakkar</h3>
+
+            </div>
+            <div class="sing">
+                <img src="sing1.png">
+                <h3>Arijit Singh</h3>
+
+            </div>
+            <div class="sing">
+                <img src="sing4.png">
+                <h3>Niti Mohan</h3>
+
+            </div>
+            <div class="sing">
+                <img src="sing3.png">
+                <h3>Jubin Nautiyal</h3>
+            </div>
+        </div>
+        <button class="button">Download App</button>
+    </section>
+
+    <footer>
+        <p>
+            Contact Us! 0000 0000 0000 0000
+        </p>
+        <div class="hori">
+            <div class="vert">
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Media Centre</a></li>
+                    <li><a href="#">Ways to Watch</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Speed Test</a></li>
+                </ul>
+            </div>
+            <div class="vert">
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Investor</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Corporate</a></li>
+                    <li><a href="#">Legal Notices</a></li>
+                </ul>
+            </div>
+            <div class="vert">
+                <ul>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Only here</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <section>
+            Copyright © 2023 | All Rights Reserved By Prashant Gupta
+        </section>
+    </footer>
+</body>
+
+</html>
